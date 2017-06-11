@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="blog-title">Mini projet django - Gibory St&eacute;phane</h2>
+        <p>Bienvenue sur le site de R&eacute;tro-Gaming</p>
+    </div>
+    <hr class="featurette-divider">
+
+    <!-- First Featurette -->
+    <div class="featurette" id="about">
+        <img class="featurette-image img-circle img-responsive pull-right" style="width:200px;" src="/media/jeux.jpg">
+        <h2 class="featurette-heading">Les Jeux<br>
+            <h3 class="text-muted">Tous les jeux r&eacute;tro disponibles ici !</h3>
+        </h2>
+        <p class="lead">Le site a été créé en 2009 par <em>St&eacute;phane Gibory</em> un fan de r&eacute;tro-gaming !</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Second Featurette -->
+    <div class="featurette" id="services">
+        <img class="featurette-image img-circle img-responsive pull-left" style="width:200px;" src="/media/news.jpg">
+        <h2 class="featurette-heading">Les news<br>
+            <h3 class="text-muted">Un système de news efficace !</h3>
+        </h2>
+        <p class="lead">Un système de news très performant avec en actu les derniers jeux rétro posté par les utilisateurs !</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Third Featurette -->
+    <div class="featurette" id="contact">
+        <img class="featurette-image img-circle img-responsive pull-right" style="width:200px;" src="/media/comment.jpg">
+        <h2 class="featurette-heading">Les commentaires<br>
+            <h3 class="text-muted">Poster vos commentaires</h3>
+        </h2>
+        <p class="lead">Notre site est toujours prêt &agrave; s'améliorer vous pouvez poster vos commentaires pour nous aider.</p>
+    </div>
+</div><!-- /.container -->
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <!-- Title -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Les commentaires</h3>
+             <hr>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row text-center">    
+        <div class="row">
+            <form action="/your-name/" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-center">    
+    {% if comments %}
+        <table class="table table-striped" width="100%">
+            <thead>
+                <tr>
+                    <th width="20%">Titre</th>
+                    <th>Commentaire</th>
+                    <th width="20%">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comment in comments %}
+                <tr>
+                    <td>{{ comment.title }}</td>
+                    <td>{{ comment.body }}</td>
+                    <td>{{ comment.created }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h4 class="text-muted">Aucun commentaire.</h4>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
